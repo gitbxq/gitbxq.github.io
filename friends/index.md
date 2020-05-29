@@ -1,5 +1,5 @@
 ---
-layout: friends
+layout: me
 title: friends
 ---
 
