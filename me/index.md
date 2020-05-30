@@ -3,7 +3,7 @@ layout: me
 title: me
 ---
 
-## bxq's blog!
+## bxq's 博客!
 
 菜鸟一枚
 
