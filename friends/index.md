@@ -3,6 +3,8 @@ layout: me
 title: friends
 ---
 
-## bxq's blog!
+## bxq's 博客!
 
-还没有大佬看得上俺:(
+## 友链：
+
+#### [西红柿毛豆](https://www.cnblogs.com/xihongdou/)
