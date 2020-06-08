@@ -1,8 +1,8 @@
 dvwa:
   name: dvwa
 
-# tag2:
-#  name: tag2
+basic:
+  name: 基础知识笔记
 
 # tag3:
 #  name: tag3
