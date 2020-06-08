@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "闲暇时间从阿里云大学记的Linux笔记"
-tags: 基础知识笔记
+tags: basic
 ---
 
 # Linux 常用基础操作命令
@@ -10,209 +10,209 @@ tags: 基础知识笔记
 
 ##### 文件目录管理命令：
 
- **tree **  用于以树状图列出目录的内容
+**tree**  用于以树状图列出目录的内容
 
-示例： **tree /usr/share/wallpapers **
+示例：**tree /usr/share/wallpapers**
 
- **ls ** : 用于显示指定工作目录下的内容
+**ls** : 用于显示指定工作目录下的内容
 
-命令格式： **ls [参数] [目录名] **
+命令格式：**ls [参数] [目录名]**
 
-示例： **ll -a **
+示例：**ll -a**
 
- **pwd **：获取当前工作目录的绝对路径
+**pwd**：获取当前工作目录的绝对路径
 
- **cd ** ：用于切换工作目录
+**cd** ：用于切换工作目录
 
-示例： **cd /usr/local/etc ** 、 **cd ../.. **
+示例：**cd /usr/local/etc** 、**cd ../..**
 
- **touch **: 用于修改文件或者目录的时间属性，包括存取时间和更改时间。若文件不存在系统会创建一个新文件。
+**touch**: 用于修改文件或者目录的时间属性，包括存取时间和更改时间。若文件不存在系统会创建一个新文件。
 
-命令格式： **touch [参数] [文件] **
+命令格式：**touch [参数] [文件]**
 
-示例： **touch demo1.txt demo2.txt **创建两个空文件
+示例：**touch demo1.txt demo2.txt**创建两个空文件
 
-​			 **touch demo1.txt **修改demo1.txt的时间记录为当前系统时间
+​			**touch demo1.txt**修改demo1.txt的时间记录为当前系统时间
 
-​			 **touch -r demo1.txt demo2.txt **更新demo2.txt的时间记录，使其和demo1.txt的时间记录相同
+​			**touch -r demo1.txt demo2.txt**更新demo2.txt的时间记录，使其和demo1.txt的时间记录相同
 
- **mkdir **：用于新建子目录，-p 参数确保目录名称存在，不存在就新建一个
+**mkdir**：用于新建子目录，-p 参数确保目录名称存在，不存在就新建一个
 
-示例： **mkdir -p a/b/c/d **
+示例：**mkdir -p a/b/c/d**
 
- **rm **：用于删除一个文件或者目录
+**rm**：用于删除一个文件或者目录
 
-命令格式： **rm [参数] [文件] **
+命令格式：**rm [参数] [文件]**
 
-示例： **rm -rf demo* **无需曲儿直接删除文件及其目录下的所有子目录文件
+示例：**rm -rf demo***无需曲儿直接删除文件及其目录下的所有子目录文件
 
- **cp **：主要用于复制文件或目录
+**cp**：主要用于复制文件或目录
 
-命令格式： **cp [参数] [源文件] [目标文件] **
+命令格式：**cp [参数] [源文件] [目标文件]**
 
-示例： **cp -r c a/b/ **将c复制到目录a/b下
+示例：**cp -r c a/b/**将c复制到目录a/b下
 
- **mv **：用来为文件或目录改名、或将文件或目录移入其他位置
+**mv**：用来为文件或目录改名、或将文件或目录移入其他位置
 
-命令格式： **mv [参数] [源文件] [目标文件] **
+命令格式：**mv [参数] [源文件] [目标文件]**
 
-示例： **mv a.txt b.txt **将文件名a.txt改为b.txt
+示例：**mv a.txt b.txt**将文件名a.txt改为b.txt
 
-​			 **mv c a/b/c/d/ **将c移动到a/b/c/d下
+​			**mv c a/b/c/d/**将c移动到a/b/c/d下
 
-​			 **mv ./* /tmp **将当前目录内容全部移动到/tmp目录下
+​			**mv ./* /tmp**将当前目录内容全部移动到/tmp目录下
 
- **rename ** 用字符串替换的方式批量改变文件名
+**rename** 用字符串替换的方式批量改变文件名
 
-示例： **rename demo DEMO * ** 将所有文件名中的字符串demo改为大写的字符串DEMO
+示例：**rename demo DEMO*** 将所有文件名中的字符串demo改为大写的字符串DEMO
 
-​			 **rename .txt .text * **将当前目录下的所有.txt文件后缀都改为text
+​			**rename .txt .text***将当前目录下的所有.txt文件后缀都改为text
 
 ##### 文件权限管理：
 
 ls命令可以查看Linux系统上的文件、目录和设备的权限
 
- **ls -l /boot/ **
+**ls -l /boot/**
 
- **chmod ** 用于修改文件权限mode，-R 参数以递归方式对子目录和文件进行修改
+**chmod** 用于修改文件权限mode，-R 参数以递归方式对子目录和文件进行修改
 
-示例： **chmod u+x test.sh **将test.sh文件增加属主的执行权限
+示例：**chmod u+x test.sh**将test.sh文件增加属主的执行权限
 
-​			 **chmod u-x test.sh ** 撤销test.sh文件属主的执行权限
+​			**chmod u-x test.sh** 撤销test.sh文件属主的执行权限
 
-​			 **chmod 744 test.sh **将test.sh文件权限修改为八进制表示的744权限
+​			**chmod 744 test.sh**将test.sh文件权限修改为八进制表示的744权限
 
- **chown **修改文件的属主和属组，-R 参数以递归的方式对子目录和文件进行修改； **ls -l **命令显示的第三、四列就是文件的属主和属组信息。 **chgrp ** 用于修改文件的属组。
+**chown**修改文件的属主和属组，-R 参数以递归的方式对子目录和文件进行修改；**ls -l**命令显示的第三、四列就是文件的属主和属组信息。**chgrp** 用于修改文件的属组。
 
 ##### 文本处理：
 
- **cat ** 用于查看内容较少的纯文本文件
+**cat** 用于查看内容较少的纯文本文件
 
-命令格式： **cat [选项] [文件] **
+命令格式：**cat [选项] [文件]**
 
-示例： **for i in $(seq 1 10); do echo $i >> test.txt ; done **将一个自增序列写入文件中， **cat test.txt **查看文件内容
+示例：**for i in $(seq 1 10); do echo $i >> test.txt ; done**将一个自增序列写入文件中，**cat test.txt**查看文件内容
 
-​			 **cat /dev/null > test.txt **将文件内容清空
+​			**cat /dev/null > test.txt**将文件内容清空
 
- **more **从前往后分页显示文件内容
+**more**从前往后分页显示文件内容
 
-示例： **more +20 /var/log/messages **从第20页开始分页查看系统日志文件
+示例：**more +20 /var/log/messages**从第20页开始分页查看系统日志文件
 
- **less ** 可以对文件或其他输出进行分页显示，与more命令类似，但是用less可以随意浏览文件，more仅能向前移动，却不能向后移动。
+**less** 可以对文件或其他输出进行分页显示，与more命令类似，但是用less可以随意浏览文件，more仅能向前移动，却不能向后移动。
 
-命令格式： **less [参数] [文件] **
+命令格式：**less [参数] [文件]**
 
-示例： **history | less ** 查看命令历史记录并通过less分页显示
+示例：**history | less** 查看命令历史记录并通过less分页显示
 
- **head ** 用于查看文件开头指定行数的内容
+**head** 用于查看文件开头指定行数的内容
 
-命令格式： **head [参数] [文件] **
+命令格式：**head [参数] [文件]**
 
-示例： **head -5 /etc/passwd ** 查看/etc/passwd文件的前5行内容
+示例：**head -5 /etc/passwd** 查看/etc/passwd文件的前5行内容
 
- **tail ** 用于查看文档的后N行或持续刷新内容
+**tail** 用于查看文档的后N行或持续刷新内容
 
-命令格式： **tail [参数] [文件] **
+命令格式：**tail [参数] [文件]**
 
-示例： **tail -f -n 10 /var/log/messages **查看/var/log/messages系统日志文件的最新10行，并保持实时刷新
+示例：**tail -f -n 10 /var/log/messages**查看/var/log/messages系统日志文件的最新10行，并保持实时刷新
 
- **stat ** 用来显示文件的详细信息，包括inode、atime、mtime、ctime等
+**stat** 用来显示文件的详细信息，包括inode、atime、mtime、ctime等
 
-示例： **stat /etc/passwd ** 查看/etc/passwd文件的详细信息
+示例：**stat /etc/passwd** 查看/etc/passwd文件的详细信息
 
- **wc ** 用于统计指定文本的行数、字数、字节数
+**wc** 用于统计指定文本的行数、字数、字节数
 
-命令格式： **wc [参数][文件] **
+命令格式：**wc [参数][文件]**
 
-示例： **wc -l /etc/passwd **统计/etc/passwd文件的行数
+示例：**wc -l /etc/passwd**统计/etc/passwd文件的行数
 
- **file ** 用于辨识文件类型
+**file** 用于辨识文件类型
 
-命令格式： **file [参数] [文件] **
+命令格式：**file [参数] [文件]**
 
-示例： **file /var/log/messages **查看/var/log/messages文件的文件类型
+示例：**file /var/log/messages**查看/var/log/messages文件的文件类型
 
- **diff ** 用于比较文件的差异
+**diff** 用于比较文件的差异
 
 ##### 文本文件处理命令：
 
- **grep ** 用于查找文件里符合条件的字符串
+**grep** 用于查找文件里符合条件的字符串
 
-命令格式： **grep [参数] [正则表达式] [文件] **
+命令格式：**grep [参数] [正则表达式] [文件]**
 
-示例： **grep -n Port /etc/ssh/ssh_config **查看sshd服务配置文件中监听端口配置所在行编号
+示例：**grep -n Port /etc/ssh/ssh_config**查看sshd服务配置文件中监听端口配置所在行编号
 
-​			 **grep -c localhost /etc/hosts ** 查询字符串在文本中出现的行数
+​			**grep -c localhost /etc/hosts** 查询字符串在文本中出现的行数
 
-​			 **ps -ef | grep sshd **  **ps -ef | grep -v grep | grep sshd **反向查找，不显示符合条件的行
+​			**ps -ef | grep sshd** **ps -ef | grep -v grep | grep sshd**反向查找，不显示符合条件的行
 
-​			 **grep -r *.sh /etc **以递归方式查找目录下含有关键字的文件。
+​			**grep -r*.sh /etc**以递归方式查找目录下含有关键字的文件。
 
-​			 **grep 'ntp[0-9].aliyun.com' /etc/ntp.conf **使用正则表达式匹配httpd配置文件中异常状态码响应的相关配置
+​			**grep 'ntp[0-9].aliyun.com' /etc/ntp.conf**使用正则表达式匹配httpd配置文件中异常状态码响应的相关配置
 
- **sed ** sed是一种流编辑器，能够完美的配合正则表达式使用。sed命令不会修改原文件，例如删除命令只表示某些行不打印输出，而不是从源文件中删去。如果要改变源文件，需要使用-i选项。
+**sed** sed是一种流编辑器，能够完美的配合正则表达式使用。sed命令不会修改原文件，例如删除命令只表示某些行不打印输出，而不是从源文件中删去。如果要改变源文件，需要使用-i选项。
 
-命令格式： **sed [参数] [动作] [文件] **
+命令格式：**sed [参数] [动作] [文件]**
 
-示例： **sed '3,$d' /etc/passwd ** 删除第三行到最后一行内容
+示例：**sed '3,$d' /etc/passwd** 删除第三行到最后一行内容
 
-​			 **sed '$a admin:x:1000:1000:admin:/home/admin:/bin/bash' /etc/passwd ** 在最后一行新增
+​			**sed '$a admin:x:1000:1000:admin:/home/admin:/bin/bash' /etc/passwd** 在最后一行新增
 
-​			 **sed 's/SELINUX=disabled/SELINUX=enforcing/' /etc/selinux/config ** 替换内容
+​			**sed 's/SELINUX=disabled/SELINUX=enforcing/' /etc/selinux/config** 替换内容
 
-​			 **sed '1c abcdefg' /etc/passwd **替换行
+​			**sed '1c abcdefg' /etc/passwd**替换行
 
- **awk ** 和sed命令类似，awk命令也是逐行扫描文件，寻找含有目标文本的行，如果匹配成功，则会在该行上执行用户想要的操作，反之，则部队其进行任何处理
+**awk** 和sed命令类似，awk命令也是逐行扫描文件，寻找含有目标文本的行，如果匹配成功，则会在该行上执行用户想要的操作，反之，则部队其进行任何处理
 
-命令格式： **awk [参数] [脚本] [文件] **
+命令格式：**awk [参数] [脚本] [文件]**
 
-示例： **ifconfig eth0 | awk '/inet/{print $2}' ** 查看本机IP地址
+示例：**ifconfig eth0 | awk '/inet/{print $2}'** 查看本机IP地址
 
-​			 **df -h | awk '/\/$/{print $4}' ** 查看本机剩余磁盘容量
+​			**df -h | awk '/\/$/{print $4}'** 查看本机剩余磁盘容量
 
-​			 **awk -F: '$3<1000{x++} END{print x}' /etc/passwd ** 统计系统用户个数
+​			**awk -F: '$3<1000{x++} END{print x}' /etc/passwd** 统计系统用户个数
 
-​			 **head -3 /etc/passwd | awk  'BEGIN{FS=":";print "name\tuid"}{print $1,"\t"$3}END{print "sum lines "NR} **输出/etc/passwd文件中前三行记录的用户名和用户uid
+​			**head -3 /etc/passwd | awk  'BEGIN{FS=":";print "name\tuid"}{print $1,"\t"$3}END{print "sum lines "NR}**输出/etc/passwd文件中前三行记录的用户名和用户uid
 
-​			 **awk -F: '$7!~/nologin$/{print $1,$7}' /etc/passwd ** 输出其中登录Shell不以nologin结尾（对第七个字段做!~反向匹配）的用户名、登录Shell信息。
+​			**awk -F: '$7!~/nologin$/{print $1,$7}' /etc/passwd** 输出其中登录Shell不以nologin结尾（对第七个字段做!~反向匹配）的用户名、登录Shell信息。
 
-​			 **netstat -na | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}' ** 查看tcp连接数。
+​			**netstat -na | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'** 查看tcp连接数。
 
-​			 **ps -ef | grep httpd | awk {'print $2'} | xargs kill -9 ** 关闭指定服务的所有的进程
+​			**ps -ef | grep httpd | awk {'print $2'} | xargs kill -9** 关闭指定服务的所有的进程
 
- **cut ** 主要用来切割字符串，可以对输入的数据进行切割然后输出
+**cut** 主要用来切割字符串，可以对输入的数据进行切割然后输出
 
-命令格式： **cut [参数] [文件] **
+命令格式：**cut [参数] [文件]**
 
-示例： **echo "hello world" | cut -b 1,3 ** 、 **echo "hello world" | cut -b 1-3 ** 按字符进行切割
+示例：**echo "hello world" | cut -b 1,3** 、**echo "hello world" | cut -b 1-3** 按字符进行切割
 
-​			 **echo "hello world" | cut -c 1,3 ** 、 **echo "hello world" | cut -c 1-3 ** 、 **echo "h和o" | cut -c 2 ** 按字符进行切割
+​			**echo "hello world" | cut -c 1,3** 、**echo "hello world" | cut -c 1-3** 、**echo "h和o" | cut -c 2** 按字符进行切割
 
-​			 **echo "hello,world,ok" | cut -d , -f 1,3 ** 、 **echo "hello,world,ok" | cut -d , -f 2-3 ** 按指定字符进行切割
+​			**echo "hello,world,ok" | cut -d , -f 1,3** 、**echo "hello,world,ok" | cut -d , -f 2-3** 按指定字符进行切割
 
- **tr ** 用于对来自标准输入的字符进行替换、验证和删除
+**tr** 用于对来自标准输入的字符进行替换、验证和删除
 
-命令格式： **tr [参数] [文本] **
+命令格式：**tr [参数] [文本]**
 
-示例： **echo "HELLO WORLD" | tr 'A-Z' 'a-z' **将输入字符由大写转换为小写
+示例：**echo "HELLO WORLD" | tr 'A-Z' 'a-z'**将输入字符由大写转换为小写
 
-​			 **echo "hello 123 world 456" | tr -d '0-9' ** 删除字符
+​			**echo "hello 123 world 456" | tr -d '0-9'** 删除字符
 
-​			 **echo "thissss is     a text linnnnnnnne." | tr -s ' sn' ** 压缩字符
+​			**echo "thissss is     a text linnnnnnnne." | tr -s ' sn'** 压缩字符
 
-​			 **cat /dev/urandom | tr -dc a-zA-Z0-9 | head -c 13 **产生随机密码
+​			**cat /dev/urandom | tr -dc a-zA-Z0-9 | head -c 13**产生随机密码
 
 ##### 常用系统工作命令：
 
- **echo ** 用于在终端输出字符串或变量提取后的值
+**echo** 用于在终端输出字符串或变量提取后的值
 
-命令格式： **echo [字符串] [$变量] **
+命令格式：**echo [字符串] [$变量]**
 
-示例： **echo "HELLO WORLD" ** 显示普通字符串
+示例：**echo "HELLO WORLD"** 显示普通字符串
 
-​			 **export name="Tom" ** 定义一个临时变量， **echo $name **使用echo命令将变量name的值显示到终端
+​			**export name="Tom"** 定义一个临时变量，**echo $name**使用echo命令将变量name的值显示到终端
 
-​			 **echo "This is a test text." > test.txt ** 显示结果定向至文件
+​			**echo "This is a test text." > test.txt** 显示结果定向至文件
 
 ```bash
 # 显示命令执行结果
@@ -220,185 +220,185 @@ echo `pwd`
 echo $(pwd)
 ```
 
- **date ** 用于显示和设置系统的时间和日期
+**date** 用于显示和设置系统的时间和日期
 
-命令格式： **data [选项] [+格式] **
+命令格式：**data [选项] [+格式]**
 
-示例： **date **按照默认格式查看当前系统时间
+示例：**date**按照默认格式查看当前系统时间
 
-​			 **date "+%Y-%m-%d %H:%M:%S" ** 按照指定格式查看当前系统时间
+​			**date "+%Y-%m-%d %H:%M:%S"** 按照指定格式查看当前系统时间
 
-​			 **date "+%j" ** 查看今天是当年中的第几天
+​			**date "+%j"** 查看今天是当年中的第几天
 
-​			 **date -s "19700101 00:00:00" ** 设置系统时间
+​			**date -s "19700101 00:00:00"** 设置系统时间
 
-​			 **ntpdate time.nist.gov **用ntpdate从时间服务器更新时间
+​			**ntpdate time.nist.gov**用ntpdate从时间服务器更新时间
 
- **wget ** 在终端中下载文件
+**wget** 在终端中下载文件
 
-命令格式： **wget [参数]下载地址 **
+命令格式：**wget [参数]下载地址**
 
- **ps ** 用于查看系统中的进程状态，命令格式： **ps [参数] **
+**ps** 用于查看系统中的进程状态，命令格式：**ps [参数]**
 
-示例： **ps -ef |grep sshd **
+示例：**ps -ef |grep sshd**
 
- **top ** 动态监视进程活动与系统负载等信息
+**top** 动态监视进程活动与系统负载等信息
 
- **pidof ** 用于查询指定服务进程的PID值，命令格式： **pidof [服务名称] **
+**pidof** 用于查询指定服务进程的PID值，命令格式：**pidof [服务名称]**
 
-示例： **pidof crond ** 查询处crond服务下的所有进程ID
+示例：**pidof crond** 查询处crond服务下的所有进程ID
 
- **kill **用于终止指定PID的服务进程，命令格式： **kill [参数] [进程PID] **
+**kill**用于终止指定PID的服务进程，命令格式：**kill [参数] [进程PID]**
 
-示例： **kill -9 1247 ** 删除PID为1247的进程
+示例：**kill -9 1247** 删除PID为1247的进程
 
- **killall ** 用于终止指定名称的服务对应的全部进程，命令格式： **kill [进程名称] **
+**killall** 用于终止指定名称的服务对应的全部进程，命令格式：**kill [进程名称]**
 
-示例： **killall crond **
+示例：**killall crond**
 
- **reboot ** 用于重启系统，命令格式： **reboot [-n] [-w] [-d] [-f] [-i] **
+**reboot** 用于重启系统，命令格式：**reboot [-n] [-w] [-d] [-f] [-i]**
 
- **poweroff ** 用来关闭系统
+**poweroff** 用来关闭系统
 
 ##### 系统状态检测命令：
 
- **ifconfig ** 用于获取网卡配置与网络状态等信息
+**ifconfig** 用于获取网卡配置与网络状态等信息
 
- **uname ** 用于查看系统内核与系统版本等信息，命令格式： **uname -[amnrsv] [--help] [--version] **
+**uname** 用于查看系统内核与系统版本等信息，命令格式：**uname -[amnrsv] [--help] [--version]**
 
- **uptime ** 用于查看系统的负载信息
+**uptime** 用于查看系统的负载信息
 
- **free ** 用于显示当前系统中内存的使用量信息，命令格式： **free [-bhkmotV][-s <间隔秒数>] **
+**free** 用于显示当前系统中内存的使用量信息，命令格式：**free [-bhkmotV][-s <间隔秒数>]**
 
- **who **显示关于当前在本地系统上的所有用户的信息
+**who**显示关于当前在本地系统上的所有用户的信息
 
-示例： **who **显示当前登录系统的用户
+示例：**who**显示当前登录系统的用户
 
-​			 **who -l -H ** 显示用户登录来源
+​			**who -l -H** 显示用户登录来源
 
-​			 **who -m -H **只显示当前用户
+​			**who -m -H**只显示当前用户
 
-​			 **who -q **精简模式显示
+​			**who -q**精简模式显示
 
- **last ** 用于显示用户最近登录信息
+**last** 用于显示用户最近登录信息
 
- **history **用于显示历史执行过的命令。bash默认记录1000条执行过的历史命令，被记录在~/.bash_history文件中。
+**history**用于显示历史执行过的命令。bash默认记录1000条执行过的历史命令，被记录在~/.bash_history文件中。
 
-示例： **history 10 ** 显示最新10条执行过的命令
+示例：**history 10** 显示最新10条执行过的命令
 
-​			  **history -c ** 清楚历史记录
+​			 **history -c** 清楚历史记录
 
 
 
 #### ssh 基于密钥的登陆方式：
 
- **ssh-keygen -t rsa ** 生成一对公钥私钥
+**ssh-keygen -t rsa** 生成一对公钥私钥
 
- **ssh-copy-id hostip ** 拷贝公钥到目标公钥
+**ssh-copy-id hostip** 拷贝公钥到目标公钥
 
 #### Linux中的文件上传与下载：
 
- **sftp **
+**sftp**
 
- **lrzsz ** 安装成功后使用 `rz` 上传文件，`sz` 下载文件
+**lrzsz** 安装成功后使用 `rz` 上传文件，`sz` 下载文件
 
 #### mount 挂载命令：
 
- **mount -o loop /挂载设备 /挂载目标 **
+**mount -o loop /挂载设备 /挂载目标**
 
- **umount /dev/dev **  卸载设备
+**umount /dev/dev**  卸载设备
 
 #### service 命令：
 
- **service --status-all **  查看系统所有的后台服务进程
+**service --status-all**  查看系统所有的后台服务进程
 
- **service [servicename] status ** 查看指定的后台服务进程状态
+**service [servicename] status** 查看指定的后台服务进程状态
 
- **service [servicename] /stop/start/restart **  指定服务的停止/开启/重启
+**service [servicename] /stop/start/restart**  指定服务的停止/开启/重启
 
 #### chkconfig 命令：
 
- **chkconfig httpd on/off ** 使 httpd 服务开机时自启/不自启
+**chkconfig httpd on/off** 使 httpd 服务开机时自启/不自启
 
 #### hostname 命令：
 
- **hostname **  查看主机名
+**hostname**  查看主机名
 
- **hostname 主机名 **  临时修改主机名
+**hostname 主机名**  临时修改主机名
 
- **hostnamectl set-hostname 主机名 **  永久修改主机名
+**hostnamectl set-hostname 主机名**  永久修改主机名
 
-修改 **/etc/hostname ** 文件也可永久修改主机名
+修改**/etc/hostname** 文件也可永久修改主机名
 
 #### netstat 命令：
 
- **netstat -nltp **  监听网络端口状态
+**netstat -nltp**  监听网络端口状态
 
 #### crontab 定时任务：
 
- **crontab -l ** 查看当前用户下的定时任务状态
+**crontab -l** 查看当前用户下的定时任务状态
 
- **crontab -e **  编辑定时任务配置文件
+**crontab -e**  编辑定时任务配置文件
 
- **crontab -u user **  指定用户定时任务
+**crontab -u user**  指定用户定时任务
 
 **配置文件内容举例：**（时间格式为：分时日月周）
 
- ***/1 * * * * date >> date.txt ** 每分钟执行一次`date`命令并将输出定向到 `data.txt`文件中
+***/1**** date >> date.txt** 每分钟执行一次`date`命令并将输出定向到 `data.txt`文件中
 
- **30 21 * * * /usr/local/etc/rc.d/httpd restart **  每晚的21：30重启 httpd 服务
+**30 21*** /usr/local/etc/rc.d/httpd restart**  每晚的21：30重启 httpd 服务
 
- **45 4 1,10,22 * * /usr/local/etc/rc.d/httpd restart **  每月的1、20、22号的4：45重启httpd服务
+**45 4 1,10,22** /usr/local/etc/rc.d/httpd restart**  每月的1、20、22号的4：45重启httpd服务
 
- **10 1 * * 6,0 /usr/local/etc/rc.d/httpd restart **  每周六周日的1：10重启 httpd 服务
+**10 1** 6,0 /usr/local/etc/rc.d/httpd restart**  每周六周日的1：10重启 httpd 服务
 
- **0,30 18-23 * * * /usr/local/etc/rc.d/httpd restart ** 每天18：00至23：00之间每隔30分钟重启 httpd 服务
+**0,30 18-23*** /usr/local/etc/rc.d/httpd restart** 每天18：00至23：00之间每隔30分钟重启 httpd 服务
 
- *** 23-7/1 * * * /usr/local/etc/rc.d/httpd restart **  23：00至7：00之间每隔1小时重启httpd服务
+*** 23-7/1*** /usr/local/etc/rc.d/httpd restart**  23：00至7：00之间每隔1小时重启httpd服务
 
- **crontab -r **  删除当前用户存在的定时服务
+**crontab -r**  删除当前用户存在的定时服务
 
 #### 监控 CPU 和 GPU的温度（需安装 lm-sensors）
 
- **sensord-detect ** 开启温度检测
+**sensord-detect** 开启温度检测
 
- **sensors ** 显示当前系统硬件的温度信息
+**sensors** 显示当前系统硬件的温度信息
 
 #### ps 命令
 
- **ps aux ** 列出当前正在运行的程序
+**ps aux** 列出当前正在运行的程序
 
- **ps aux --sort=%cpu | grep -m 11 **  列出当前最占资源的前十程序
+**ps aux --sort=%cpu | grep -m 11**  列出当前最占资源的前十程序
 
 #### di 磁盘信息命令
 
- **di **  默认输出
+**di**  默认输出
 
- **di -A **  打印类似挂载点、特殊设备名称等全部字段
+**di -A**  打印类似挂载点、特殊设备名称等全部字段
 
- **di -a **  打印所有挂载的设备
+**di -a**  打印所有挂载的设备
 
- **di -c **  用逗号作为值的分隔符
+**di -c**  用逗号作为值的分隔符
 
- **di -g **  通过千兆字节单位打印大小
+**di -g**  通过千兆字节单位打印大小
 
- **di -l tmpfs **  显示特定的文件系统类型的相关信息
+**di -l tmpfs**  显示特定的文件系统类型的相关信息
 
- **di -n **  跳过标题行的输出
+**di -n**  跳过标题行的输出
 
- **di -t ** 在文件系统列表底部打印一行总计行
+**di -t** 在文件系统列表底部打印一行总计行
 
- **di -sr **  排序输出
+**di -sr**  排序输出
 
- **di -fm **  指定输出格式打印挂载点的名称
+**di -fm**  指定输出格式打印挂载点的名称
 
 #### echo 命令：
 
- **echo text ** 屏幕输出打印文本内容
+**echo text** 屏幕输出打印文本内容
 
- **echo -e "PATTERN" ** ：**\a**警报声音，**\b**退格键，**\c**不执行换行类似于 **echo -n **，**\r**回车，**\t**制表符，**"\\"**斜线，**\0nnn**八进制，**\xnn16**十六进制
+**echo -e "PATTERN"** ：**\a**警报声音，**\b**退格键，**\c**不执行换行类似于**echo -n**，**\r**回车，**\t**制表符，**"\\"**斜线，**\0nnn**八进制，**\xnn16**十六进制
 
- **echo ** 中单引号存在强引用会将变量替换，双引号存在弱引用不会将变量替换为字符串， **echo  ** 单独可以分辨变量性质， ** **反向单引号内可执行命令并通过 **echo ** 输出，能够识别内涵的命令变量， ** **=$()。
+**echo** 中单引号存在强引用会将变量替换，双引号存在弱引用不会将变量替换为字符串，**echo ** 单独可以分辨变量性质，****反向单引号内可执行命令并通过**echo** 输出，能够识别内涵的命令变量，****=$()。
 
 ### 正则表达式：
 
@@ -463,9 +463,9 @@ $ #行尾锚定，用于模式的左右侧
 
 ### Linux 命令提示符：
 
- **cat /etc/*OS-release ** 查看当前系统运行版本
+**cat /etc/*OS-release** 查看当前系统运行版本
 
- **echo $PS1 **  显示提示符格式
+**echo $PS1**  显示提示符格式
 
 **PS1="\[\e[1;5;41;33m\][\u@\h \W]\\$\[\e[0m\]"** （修改提示符格式举例）
 
@@ -495,7 +495,7 @@ $ #行尾锚定，用于模式的左右侧
 
 **/etc/issue** 修改此文件内容可实现用户登录前提示信息
 
-修改 **/etc/gdm/custom.conf** 配置文件内容：设置 root 账户开机自动登录
+修改**/etc/gdm/custom.conf** 配置文件内容：设置 root 账户开机自动登录
 
 “**AutomaticLoginEnable=true**”
 
@@ -507,157 +507,157 @@ $ #行尾锚定，用于模式的左右侧
 
 
 
- **startx/init PATTERN ** 切换运行模式（级别），**3**为命令行模式，**5**为图形化界面，**0**关机，**6**关机
+**startx/init PATTERN** 切换运行模式（级别），**3**为命令行模式，**5**为图形化界面，**0**关机，**6**关机
 
- **runlevel ** 查看当前运行级别， **tty ** 查看当前运行窗口
+**runlevel** 查看当前运行级别，**tty** 查看当前运行窗口
 
 
 
 #### 快捷键：
 
- **Ctrl L ** 清屏
+**Ctrl L** 清屏
 
- **Ctrl S ** 锁定屏幕， **Ctrl Q ** 解锁 （这里的锁定屏幕只是锁定了屏幕的输出打印信息，不影响命令的执行）
+**Ctrl S** 锁定屏幕，**Ctrl Q** 解锁 （这里的锁定屏幕只是锁定了屏幕的输出打印信息，不影响命令的执行）
 
- **Ctrl O ** 执行当前命令并重新显示此条命令
+**Ctrl O** 执行当前命令并重新显示此条命令
 
- **Ctrl C ** 中止命令
+**Ctrl C** 中止命令
 
- **Ctrl Z ** 挂起命令
+**Ctrl Z** 挂起命令
 
- **Ctrl A ** 将光标移动到行首， **Ctrl E ** 将光标移动到行尾
+**Ctrl A** 将光标移动到行首，**Ctrl E** 将光标移动到行尾
 
- **Ctrl U **  删除光标前的命令， **Ctrl K ** 删除光标后的命令
+**Ctrl U**  删除光标前的命令，**Ctrl K** 删除光标后的命令
 
 
 
 #### 命令格式：
 
- **which/whereis/type/enable ** 命令查找/查看命令类型及命令种类
+**which/whereis/type/enable** 命令查找/查看命令类型及命令种类
 
- **type command ** 判断命令是内部还是外部命令或是别名
+**type command** 判断命令是内部还是外部命令或是别名
 
- **enable -n command **  禁用内部命令
+**enable -n command**  禁用内部命令
 
- **enable command ** 启用内部命令
+**enable command** 启用内部命令
 
-用户家目录下的 **.bashrc** 文件存放着用户配置的命令别名信息，使用  **source .bashrc ** 命令可强制将别名配置保存到内存中。
+用户家目录下的**.bashrc** 文件存放着用户配置的命令别名信息，使用 **source .bashrc** 命令可强制将别名配置保存到内存中。
 
- **alias 别名='command' **  设置命令的别名，**/etc/bashrc** 文件中保存系统全局别名等信息
+**alias 别名='command'**  设置命令的别名，**/etc/bashrc** 文件中保存系统全局别名等信息
 
- **alias rm='mv -t /trashbin/' **  生产环境中尽量不要用到 **rm **命令，这是非常危险的，可将 **rm **命令设置别名，移动到“垃圾桶”中
+**alias rm='mv -t /trashbin/'**  生产环境中尽量不要用到**rm**命令，这是非常危险的，可将**rm**命令设置别名，移动到“垃圾桶”中
 
- **unalias 别名 **  取消别名
+**unalias 别名**  取消别名
 
 ###### 执行命令的方式：（首先保证为可执行且当前用户具有权限）
 
- **command **
+**command**
 
- **'command' **
+**'command'**
 
- **"command" **
+**"command"**
 
- **\command **  若存在与命令同名的别名且可执行文件存在于**/bin**或**/usr/bin**目录下，执行原始命令，跳过别名
+**\command**  若存在与命令同名的别名且可执行文件存在于**/bin**或**/usr/bin**目录下，执行原始命令，跳过别名
 
- **/path/command **  执行外部命令的原始命令
+**/path/command**  执行外部命令的原始命令
 
 系统命令存在别名的情况下可在命令前加**\\** ,如**\rm** 可执行**rm**的原始命令
 
 #### 时间命令：
 
- **date **  查看当前系统时间
+**date**  查看当前系统时间
 
- **date MMDDHHmmYYYY.ss ** 设置时间
+**date MMDDHHmmYYYY.ss** 设置时间
 
- **clock **  查看当前硬件时钟时间
+**clock**  查看当前硬件时钟时间
 
- **clock -s **  以硬件时间为准覆盖系统时间
+**clock -s**  以硬件时间为准覆盖系统时间
 
- **clock -w **  以系统时间为准覆盖硬件时间
+**clock -w**  以系统时间为准覆盖硬件时间
 
- **timedatectl **  时间命令
+**timedatectl**  时间命令
 
- **ntpdate hostaddress ** 与相联网的机器同步时间
+**ntpdate hostaddress** 与相联网的机器同步时间
 
 #### 电源命令：
 
- **reboot **  重启命令
+**reboot**  重启命令
 
- **reboot -p/-f ** 切断电源/强制重启
+**reboot -p/-f** 切断电源/强制重启
 
- **shutdown **  关机命令
+**shutdown**  关机命令
 
- **shutdown -r **  重启，+数字设置时间， **-c **  取消当前 **shutdown **命令， **-n **立即关机
+**shutdown -r**  重启，+数字设置时间，**-c**  取消当前**shutdown**命令，**-n**立即关机
 
 #### 查看用户信息：
 
- **w **
+**w**
 
- **who **
+**who**
 
- **whoami **
+**whoami**
 
- **id **
+**id**
 
 #### screen 会话命令：
 
- **screen -S 会话名称 ** 新建会话
+**screen -S 会话名称** 新建会话
 
- **screen -ls **  查看当前可访问的会话列表
+**screen -ls**  查看当前可访问的会话列表
 
- **screen -x 会话名称 ** 加入会话
+**screen -x 会话名称** 加入会话
 
-`Ctrl A+D` 暂时退出当前会话，`Ctrl R` 回到原先会话， **exit ** 命令退出会话
+`Ctrl A+D` 暂时退出当前会话，`Ctrl R` 回到原先会话，**exit** 命令退出会话
 
 （自我执行会话的意义：可保护远程主机的会话状态）
 
 #### 帮助命令：
 
- **whatis ** =  **man -f ** 显示命令的简短描述
+**whatis** = **man -f** 显示命令的简短描述
 
- **makewhatis ** 创建**whatis** 数据库（centos6）
+**makewhatis** 创建**whatis** 数据库（centos6）
 
- **mandb ** 创建**whatis**数据库
+**mandb** 创建**whatis**数据库
 
-内部命令查看帮助可以使用 **help ** 查看
+内部命令查看帮助可以使用**help** 查看
 
-外部命令查看帮助需借助于 **man ** 命令
+外部命令查看帮助需借助于**man** 命令
 
- **man -k keyword ** 搜索有关关键字内容的所有内容， **-w ** 显示关键字存在路径
+**man -k keyword** 搜索有关关键字内容的所有内容，**-w** 显示关键字存在路径
 
- **/keyword ** 打开 **man ** 手册时使用该方式向下查找关键字， **?keyword ** 向上查找
+**/keyword** 打开**man** 手册时使用该方式向下查找关键字，**?keyword** 向上查找
 
 **/usr/share/doc/** 为软件帮助手册目录
 
 #### history 历史命令：
 
- **!命令历史编号 ** 可执行 **history **中的命令， **history **的变量为**HISTSIZE**存放于**/etc/profile**
+**!命令历史编号** 可执行**history**中的命令，**history**的变量为**HISTSIZE**存放于**/etc/profile**
 
- **!! ** 或  **!-1 **  可执行历史中的上一条（倒数第一条）命令
+**!!** 或 **!-1**  可执行历史中的上一条（倒数第一条）命令
 
- **Ctrl N **  显示当前历史的下一条命令
+**Ctrl N**  显示当前历史的下一条命令
 
- **!string **  重复最近的上一条以**string** 开头的命令
+**!string**  重复最近的上一条以**string** 开头的命令
 
- **!?string ** 重复最近的上一条包好**string** 的命令
+**!?string** 重复最近的上一条包好**string** 的命令
 
- **!$ **  输出上一条命令的最后一个参数
+**!$**  输出上一条命令的最后一个参数
 
- **!* **  输出上一条命令的所有参数
+**!***  输出上一条命令的所有参数
 
- **^abc **  将前一个命令中的第一个**abc** 删除
+**^abc**  将前一个命令中的第一个**abc** 删除
 
- **^string1^string2 ** 将前一个命令中的第一个**string1**替换成**string2**
+**^string1^string2** 将前一个命令中的第一个**string1**替换成**string2**
 
- **!:gs/string1/string2 ** 将前一个命令中的所有**string1**替换成**string2**
+**!:gs/string1/string2** 将前一个命令中的所有**string1**替换成**string2**
 
- **Ctrl R ** 搜索历史， **Ctrl G **退出搜索执行
+**Ctrl R** 搜索历史，**Ctrl G**退出搜索执行
 
-按住 **Esc ** 后松开，按下 **. ** 显示上一条命令的最后一个参数
+按住**Esc** 后松开，按下**.** 显示上一条命令的最后一个参数
 
-同时按住 **Alt **和 **. ** 显示上一条命令最后参数
+同时按住**Alt**和**.** 显示上一条命令最后参数
 
-先删除用户家目录下的**.bashrc_history**，再执行 **history -c ** 可彻底清除history
+先删除用户家目录下的**.bashrc_history**，再执行**history -c** 可彻底清除history
 
 命令历史变量：**HISTSIZE** 命令历史记录的条数、**HISTFILE** 指定历史文件、**HISTFILESIZE** 命令历史文件记录历史的条数、**HISTFILEMEFORMAT="%F %T"** 显示时间、**HISTIGNORE="str1:str2*..."** 忽略str1命令，str2开头的历史
 
@@ -753,23 +753,23 @@ $ #行尾锚定，用于模式的左右侧
 
 #### 文件及目录的操作（增、删、改、查）
 
- **ls **  列出当前目录下的文件及目录
+**ls**  列出当前目录下的文件及目录
 
- **ls -a **  列出当前文件下的所有文件及目录，包括隐藏文件
+**ls -a**  列出当前文件下的所有文件及目录，包括隐藏文件
 
- **ls /etc/ **  列出**/etc** 目录下的文件及目录
+**ls /etc/**  列出**/etc** 目录下的文件及目录
 
- **ls -1 **  将文件呈单列显示， **-S ** 参数将文件按照大小排序， **-r ** 参数逆序排序， **-t **（--time=atime/mtime/ctime）按照时间顺序排序（mtime修改时间/atime访问时间/ctime元数据的修改时间）， **-X ** 按照文件后缀显示
+**ls -1**  将文件呈单列显示，**-S** 参数将文件按照大小排序，**-r** 参数逆序排序，**-t**（--time=atime/mtime/ctime）按照时间顺序排序（mtime修改时间/atime访问时间/ctime元数据的修改时间），**-X** 按照文件后缀显示
 
- **ls -aI "[^.]*" ** 或  **ls dir/.* -d ** 只显示当前目录隐藏文件
+**ls -aI "[^.]*"** 或 **ls dir/.* -d** 只显示当前目录隐藏文件
 
- **ls /etc/*/ -d **  显示**/etc/**目录下的所有非隐藏目录
+**ls /etc/*/ -d**  显示**/etc/**目录下的所有非隐藏目录
 
- **ls -lhS ** 根据文件大小排序
+**ls -lhS** 根据文件大小排序
 
- **ls -lhSr **从小到大排序
+**ls -lhSr**从小到大排序
 
- **ls -lht **按照文件修改时间排序
+**ls -lht**按照文件修改时间排序
 
 ```bash
 ls -l / --time-style=+%D |grep `date +%D` #找出今天更新的文件
@@ -777,98 +777,98 @@ ls -l / --time-style=+%D |grep `date +%D` #找出今天更新的文件
 
 
 
- **pwd **  显示当前工作目录， **-P ** 参数显示真实路径， **-L ** 参数显示链接路径
+**pwd**  显示当前工作目录，**-P** 参数显示真实路径，**-L** 参数显示链接路径
 
- **basename ** 命令取文件基名， **dirname ** 取文件目录名
+**basename** 命令取文件基名，**dirname** 取文件目录名
 
- **cd **  切换目录命令，默认执行 **cd ** 切换到家目录
+**cd**  切换目录命令，默认执行**cd** 切换到家目录
 
- **cd -P /dir ** 切换到真实路径， **cd - ** 回到前一目录， **cd ~user ** 切换到用户user的家目录， **cd .. ** 切换到上级目录
+**cd -P /dir** 切换到真实路径，**cd -** 回到前一目录，**cd ~user** 切换到用户user的家目录，**cd ..** 切换到上级目录
 
- **stat filename **  可查看文件状态信息
+**stat filename**  可查看文件状态信息
 
- **touch filename **  创建文件
+**touch filename**  创建文件
 
- **touch -- -a ** 或  **touch ./-a ** 或  **touch /dir/-a ** 可创建-a文件
+**touch -- -a** 或 **touch ./-a** 或 **touch /dir/-a** 可创建-a文件
 
 ```bash
 touch `date +%F`.log #生成当前日期的日志文件
 ```
 
- **touch -t ** 参数可更改文件时间戳
+**touch -t** 参数可更改文件时间戳
 
- **touch -c **  参数刷新现有文件的时间戳不创建新的空文件
+**touch -c**  参数刷新现有文件的时间戳不创建新的空文件
 
 新建文件及目录会在系统中生成对应的节点编号，所以文件不可被新建的情况存在两种：节点编号耗尽与空间资源耗尽同样报错并无法新建文件行为
 
 在同一分区中移动数据不改变数据本身的节点编号及空间占用，在不同分区中移动数据会改变节点编号及分区占用空间。
 
- **cp ** 拷贝命令
+**cp** 拷贝命令
 
- **-a ** 参数保留原来属性，可用于备份
+**-a** 参数保留原来属性，可用于备份
 
- **-r ** 参数表示递归，可用于复制目录及子目录内容
+**-r** 参数表示递归，可用于复制目录及子目录内容
 
- **cp file /dir/file ** 将**file**文件复制到**/dir/file**
+**cp file /dir/file** 将**file**文件复制到**/dir/file**
 
- **cp file1{,.bak} ** 创建**file1**的**bak** 备份文件
+**cp file1{,.bak}** 创建**file1**的**bak** 备份文件
 
- **cp /dir/.[^.]* /des ** 将**dir**下的所有隐藏文件复制到**des**中
+**cp /dir/.[^.]* /des** 将**dir**下的所有隐藏文件复制到**des**中
 
- **cp /dir/. /des ** 将**dir**下的所有文件复制到**des**中
+**cp /dir/. /des** 将**dir**下的所有文件复制到**des**中
 
- **mv ** 移动命令
+**mv** 移动命令
 
- **mv a /dir/a ** 将文件**a** 移动到**/dir/a**
+**mv a /dir/a** 将文件**a** 移动到**/dir/a**
 
- **mv file1 file2 ** 将文件**file1** 重命名为**file2**
+**mv file1 file2** 将文件**file1** 重命名为**file2**
 
 ```bash
-rename conf conf.bak* *.conf  #将所有后缀为.conf的文件的后缀改为.conf.bak
+rename conf conf.bak**.conf  #将所有后缀为.conf的文件的后缀改为.conf.bak
 ```
 
- **rm ** 删除命令
+**rm** 删除命令
 
- **rm file ** 删除文件
+**rm file** 删除文件
 
- **rm -r dir ** 删除目录
+**rm -r dir** 删除目录
 
- **-i ** 参数表示带有提示是否要执行删除操作
+**-i** 参数表示带有提示是否要执行删除操作
 
- **-f ** 参数表示强制执行（危险行为）
+**-f** 参数表示强制执行（危险行为）
 
- **rm -f * ** 删除当前目录下的文件
+**rm -f*** 删除当前目录下的文件
 
- **find . -type of -delete ** 或 **find . -type f -exec rm -f {} \; **用 **find **命令查找普通文件并删除or用find命令处理动作将其删除
+**find . -type of -delete** 或**find . -type f -exec rm -f {} \;**用**find**命令查找普通文件并删除or用find命令处理动作将其删除
 
- **find . -type f | xargs rm -f ** 用于参数列表过长；要删除的文件太多
+**find . -type f | xargs rm -f** 用于参数列表过长；要删除的文件太多
 
 ```bash
 rm -f `find . -type f` #删除全部普通文件
-for delete in `ls -l`;do rm -f *;done #用for循环语句删除当前目录下的所有类型文件
+for delete in `ls -l`;do rm -f*;done #用for循环语句删除当前目录下的所有类型文件
 ```
 
 
 
- **touch -- -a ** 或者  **touch ./-a ** 创建**-a**文件， **rm -- -a ** 或者  **rm ./-a ** 删除**-a**文件
+**touch -- -a** 或者 **touch ./-a** 创建**-a**文件，**rm -- -a** 或者 **rm ./-a** 删除**-a**文件
 
- **touch '~file' ** 创建**~file**文件， **rm '~file' ** 删除**~file**文件
+**touch '~file'** 创建**~file**文件，**rm '~file'** 删除**~file**文件
 
- **locate ** 文件查找命令（需从数据库中读取并查找）
+**locate** 文件查找命令（需从数据库中读取并查找）
 
- **locate file ** 搜索**file**文件（ **locate ** 命令大多用于搜索系统中固定文件）
+**locate file** 搜索**file**文件（**locate** 命令大多用于搜索系统中固定文件）
 
- **updatedb ** 更新**mlocate.db**数据库
+**updatedb** 更新**mlocate.db**数据库
 
- **find ** 实时查找系统中的文件
+**find** 实时查找系统中的文件
 
- **find /data -maxdepth 2 -mindepth 2 ** 搜索**/data**中深度为2的所有文件
+**find /data -maxdepth 2 -mindepth 2** 搜索**/data**中深度为2的所有文件
 
- **find /data -name test.sh ** 精确搜索**/data**中的**test.sh**
+**find /data -name test.sh** 精确搜索**/data**中的**test.sh**
 
- **find /data -name "*test" ** 模糊搜索**/data**中的文件
+**find /data -name "*test"** 模糊搜索**/data**中的文件
 
- **find ** 示例：
+**find** 示例：
 
 ```bash
 find -name snow.png
@@ -882,17 +882,17 @@ find -not \(-user joe -o -user jane \)
 find / -user joe -o -uid 500
 ```
 
- **cat、tac、rev ** 文件查看命令
+**cat、tac、rev** 文件查看命令
 
- **more、less ** 分页查看文件内容
+**more、less** 分页查看文件内容
 
- **head ** 命令默认查看文件前10行，可以用 **-n **参数截取前多少行**n**代替数字， **-c ** 为取文件前几个字节参数后加数字
+**head** 命令默认查看文件前10行，可以用**-n**参数截取前多少行**n**代替数字，**-c** 为取文件前几个字节参数后加数字
 
- **tail ** 命令默认为查看文件后10行， **tail -f -n 10 file **命令常用来追踪文件内容变化，一般用来查看日志信息
+**tail** 命令默认为查看文件后10行，**tail -f -n 10 file**命令常用来追踪文件内容变化，一般用来查看日志信息
 
- **tail -F -n 10 file ** 同样可用来追踪文件变化，文件丢失后可继续跟踪文件，只要符合文件名存在
+**tail -F -n 10 file** 同样可用来追踪文件变化，文件丢失后可继续跟踪文件，只要符合文件名存在
 
- **tailf ** 类似于 **tail -f ** 当文件不增长是并不访问文件
+**tailf** 类似于**tail -f** 当文件不增长是并不访问文件
 
 #### 链接文件：
 
@@ -913,29 +913,29 @@ find / -user joe -o -uid 500
 >   7.  是否支持创建目录的链接文件
 >   8.  相对路径方式不同
 
- **ln file hard ** 创建**file**的硬链接**hard**
+**ln file hard** 创建**file**的硬链接**hard**
 
- **ln -s file soft ** 创建**file**的软链接**soft**
+**ln -s file soft** 创建**file**的软链接**soft**
 
- **diff ** 比较两文件的区别
+**diff** 比较两文件的区别
 
- **-u ** 参数输出统一的diff格式文件，最适合用于补丁文件
+**-u** 参数输出统一的diff格式文件，最适合用于补丁文件
 
- **patch ** 复制对文件改变
+**patch** 复制对文件改变
 
- **-b ** 参数自动备份发生改变的文件
+**-b** 参数自动备份发生改变的文件
 
- **diff -u foo.conf foo2.conf > foo.patch **
+**diff -u foo.conf foo2.conf > foo.patch**
 
- **patch -b foo.conf foo.patch **
+**patch -b foo.conf foo.patch**
 
- **paste ** 横向合并命令
+**paste** 横向合并命令
 
- **paste file1 file2 ** 横向合并**file1**和**file2**
+**paste file1 file2** 横向合并**file1**和**file2**
 
- **paste -d":" file1 file2 ** 以“:” 作为分隔符合并**file1**和**file2**
+**paste -d":" file1 file2** 以“:” 作为分隔符合并**file1**和**file2**
 
- **paste -s f1 f2 ** 将所有的行合并为一行
+**paste -s f1 f2** 将所有的行合并为一行
 
 #### 文件及目录权限：
 
@@ -947,11 +947,11 @@ chmod u=,g=,o= file
 
 模式法：
 
- **who：u g o a **
+**who：u g o a**
 
- **opt: = + - **
+**opt: = + -**
 
- **per：r w x **
+**per：r w x**
 
 数字法：（技术存在执行权限，偶数不存在执行权限）
 
@@ -984,9 +984,9 @@ w write 可创建，删除文件
 
 x excute cd 访问目录内的文件和执行目录切换操作
 
-X  **chmod -R a+wX ** 递归操作，只针对子目录与当前目录添加写和执行权限
+X **chmod -R a+wX** 递归操作，只针对子目录与当前目录添加写和执行权限
 
- **chmod --reference f2 /dir/f1 ** 将**f2**的权限复制到**/dir/f1**上
+**chmod --reference f2 /dir/f1** 将**f2**的权限复制到**/dir/f1**上
 
 一个目录里的文件能否删除移动或创建由目录权限决定
 
@@ -1000,7 +1000,7 @@ umask权限：
 
 umask权限+默认权限=666/777
 
- **umask 022 **修改umask值为022，此时在当前目录下新建文件默认权限为644，新建目录权限为755
+**umask 022**修改umask值为022，此时在当前目录下新建文件默认权限为644，新建目录权限为755
 
 若想永久保存umask值，可将配置写入到**~/.bashrc**文件中
 
@@ -1010,13 +1010,13 @@ umask值计算方式：
 
 对于目录：777-umask
 
-umask也可使用模式描述方式设置如： **umask u=rw g=r o=/ **
+umask也可使用模式描述方式设置如：**umask u=rw g=r o=/**
 
 Linux文件系统上的特殊权限：
 
 SUID权限：继承所有者权限，当执行含有**S**权限的文件时，当前命令权限为SUID权限文件所有者的权限
 
- **chmod 4755 file **或 **chmod u+s file ** 给**file**文件赋予当前账号所有者的suid权限（suid权限采用单独计算方式，值为4，后跟文件普通权限）
+**chmod 4755 file**或**chmod u+s file** 给**file**文件赋予当前账号所有者的suid权限（suid权限采用单独计算方式，值为4，后跟文件普通权限）
 
 SUID权限作用于可执行的二进制文件等，当用户执行此文件的时候，会继承此文件所有者的权限
 
@@ -1024,9 +1024,9 @@ SGID权限：继承所属组权限，作用于可执行的二进制文件等，�
 
 当SGID作用于目录上时：该目录机器子目录和文件的所属组继承具有SGID权限目录的所属组权限
 
- **chmod g+s file **或 **chmod 2755 file ** 给**file**文件赋予当前账号所有组权限（SGID权限同样采用单独计算方式，值为2）
+**chmod g+s file**或**chmod 2755 file** 给**file**文件赋予当前账号所有组权限（SGID权限同样采用单独计算方式，值为2）
 
-Sticky权限：粘滞位权限。 **chmod o+t file **或 **chmod 1755 file ** 赋予**file** Stiky权限
+Sticky权限：粘滞位权限。**chmod o+t file**或**chmod 1755 file** 赋予**file** Stiky权限
 
 Sticky作用于目录时，对目录内的文件，只能增删改属于用户自己的文件。
 
@@ -1055,57 +1055,57 @@ ACL访问控制列表生效顺序：所有者，自定义用户，自定义组�
 
 #### 标准输入、标准输出、错误：
 
- **> ** 为重定向输出， **> ** 可用来创建空文件： **> file **，如果文件已存在 **> ** 则将清空此文件
+**>** 为重定向输出，**>** 可用来创建空文件：**> file**，如果文件已存在**>** 则将清空此文件
 
- **>> **  为在文件内容后追加
+**>>**  为在文件内容后追加
 
-执行 **set -C/+C ** 后， **> ** 命令（不）执行覆盖，此时 **>| ** 强制覆盖
+执行**set -C/+C** 后，**>** 命令（不）执行覆盖，此时**>|** 强制覆盖
 
- **0 ** 为输入， **1 ** 为输出， **2 ** 为错误，如： **cmd 2> error.txt ** 将错误结果输出到**error.txt**文件中
+**0** 为输入，**1** 为输出，**2** 为错误，如：**cmd 2> error.txt** 将错误结果输出到**error.txt**文件中
 
- **ls /dir /error > /out 2> /outerror ** 区分对错输出
+**ls /dir /error > /out 2> /outerror** 区分对错输出
 
- **ls /dir /error > /out 2>&1 **  或  **ls /dir /error 2> /out 1>&2 ** 或  **ls /dir /error &> /out ** 将对错结果全部输出到同一个文件中
+**ls /dir /error > /out 2>&1**  或 **ls /dir /error 2> /out 1>&2** 或 **ls /dir /error &> /out** 将对错结果全部输出到同一个文件中
 
- **(cal 02 2002;cal 02 2009) > /output ** 将多个命令结果输出到一个文件中
+**(cal 02 2002;cal 02 2009) > /output** 将多个命令结果输出到一个文件中
 
- **echo password |passwd --stdin user &> /dev/null ** 将修改口令的结果置空
+**echo password |passwd --stdin user &> /dev/null** 将修改口令的结果置空
 
- **touch 文件名 ** 可将现存文件刷新时间戳， **>> ** 创建文件时不会刷新时间戳
+**touch 文件名** 可将现存文件刷新时间戳，**>>** 创建文件时不会刷新时间戳
 
- **< ** 为重定向输入
+**<** 为重定向输入
 
-如： **bc < f1.txt > bc.out ** 将**f1.txt** 文件中的内容计算结果输出到**out**文件中
+如：**bc < f1.txt > bc.out** 将**f1.txt** 文件中的内容计算结果输出到**out**文件中
 
- **cat < file1 > file2 ** 等同于 **copy file1 fiel2 **
+**cat < file1 > file2** 等同于**copy file1 fiel2**
 
-标准错误无法通过管道符除非在命令中执行 **2&>1 **  或 **|& **
+标准错误无法通过管道符除非在命令中执行**2&>1**  或**|&**
 
- **cat > f1 ** 单行重定向，可将键盘输入内容输出到**f1**中，每执行一次回车进行一次定向输出
+**cat > f1** 单行重定向，可将键盘输入内容输出到**f1**中，每执行一次回车进行一次定向输出
 
- **cat > f1 <<b ** 多行重定向，可将键盘输入的多行内容重定向至**f1**，每输入一次**b**重定向一次
+**cat > f1 <<b** 多行重定向，可将键盘输入的多行内容重定向至**f1**，每输入一次**b**重定向一次
 
- **cat |tee cat.log ** 在重定向的同时将内容打印到屏幕上（会覆盖原文件）
+**cat |tee cat.log** 在重定向的同时将内容打印到屏幕上（会覆盖原文件）
 
- **cat |tee -a cat.log ** （不会覆盖原文件）
+**cat |tee -a cat.log** （不会覆盖原文件）
 
 #### 网络设置：
 
- **nmcli connection modify eth0 connection.autoconnect yes **  设置网卡自动连接（可写到用户家目录的**.bashrc**或全局配置文件中做永久保存）
+**nmcli connection modify eth0 connection.autoconnect yes**  设置网卡自动连接（可写到用户家目录的**.bashrc**或全局配置文件中做永久保存）
 
- **mii-tool -v eth0 ** 或 **ethtool eth0 ** 查看网卡信息
+**mii-tool -v eth0** 或**ethtool eth0** 查看网卡信息
 
- **ss -ntul **  查看本机端口监听状态
+**ss -ntul**  查看本机端口监听状态
 
 机器的**ttl**值保存在**/proc/sys/net/ipv4/ip_default_ttl**文件中
 
-在终端命令中，可直接 **ping **通IP地址二进制转换后的数字地址
+在终端命令中，可直接**ping**通IP地址二进制转换后的数字地址
 
 如：192.168.0.1
 
 11000000101010000000000000000001=3232235521（二进制-十进制）
 
- **ping 3232235521 ** 可通
+**ping 3232235521** 可通
 
 ##### 路由表的构成：
 
@@ -1116,37 +1116,37 @@ ACL访问控制列表生效顺序：所有者，自定义用户，自定义组�
 
 **/etc/udev/rules.d/**下存放**“70..net”**命名格式的文件，其中保存着网卡的命名方式
 
- **dmesg |grep -i eth0 **  或  **ethtool -i ** 可查看网卡命令
+**dmesg |grep -i eth0**  或 **ethtool -i** 可查看网卡命令
 
- **modprobe -f eth ** 卸载网卡驱动， **modprobe eth ** 重新加载网卡驱动
+**modprobe -f eth** 卸载网卡驱动，**modprobe eth** 重新加载网卡驱动
 
- **system-config-network-tui ** 网络配置终端图形化界面
+**system-config-network-tui** 网络配置终端图形化界面
 
- **ifconfig ** 命令，执行此命令默认显示当前系统中活动的网卡信息
+**ifconfig** 命令，执行此命令默认显示当前系统中活动的网卡信息
 
- **ifconfig -a ** 显示所有网卡信息
+**ifconfig -a** 显示所有网卡信息
 
- **ifconfig eth0 1.1.1.1/24 ** 或  **ifconfig eth0 1.1.1.1 netmask 255.255.255.0 ** 临时配置网卡地址
+**ifconfig eth0 1.1.1.1/24** 或 **ifconfig eth0 1.1.1.1 netmask 255.255.255.0** 临时配置网卡地址
 
- **ifconfig eth0 up/down ** 启用/禁用网卡。 **ifdown/ifup eth0 ** 启用/禁用网卡（针对网卡配置文件存在于**/etc/sysconfig/network-script**中时有效）
+**ifconfig eth0 up/down** 启用/禁用网卡。**ifdown/ifup eth0** 启用/禁用网卡（针对网卡配置文件存在于**/etc/sysconfig/network-script**中时有效）
 
- **ifconfig eth0 promisc[-promisc] ** 启用/禁用混杂模式
+**ifconfig eth0 promisc[-promisc]** 启用/禁用混杂模式
 
- **ifconfig eth0 broadcast[-broadcast] ** 启用/禁用广播
+**ifconfig eth0 broadcast[-broadcast]** 启用/禁用广播
 
- **ip link ** 查看网卡活动状态
+**ip link** 查看网卡活动状态
 
- **route -n ** 查看当前系统中存在的路由表信息
+**route -n** 查看当前系统中存在的路由表信息
 
- **route add -host 1.1.1.1 gw 2.2.2.2 dev eth0 ** 添加仅主机路由等同于 **route add -net 1.1.1.1 netmask 255.255.255.255 gw 2.2.2.2 dev eth0 **
+**route add -host 1.1.1.1 gw 2.2.2.2 dev eth0** 添加仅主机路由等同于**route add -net 1.1.1.1 netmask 255.255.255.255 gw 2.2.2.2 dev eth0**
 
- **route add -net 3.3.3.3 netmask 255.255.255.0 gw 4.4.4.4 dev eth0 ** 添加网络路由
+**route add -net 3.3.3.3 netmask 255.255.255.0 gw 4.4.4.4 dev eth0** 添加网络路由
 
- **route add default gw 6.6.6.6 ** 添加默认路由等同于 **route add -net 0.0.0.0 netmask 0.0.0.0 gw 6.6.6.6 dev eth0 **
+**route add default gw 6.6.6.6** 添加默认路由等同于**route add -net 0.0.0.0 netmask 0.0.0.0 gw 6.6.6.6 dev eth0**
 
- **route del ** 删除路由记录
+**route del** 删除路由记录
 
- **service network restart ** 或 **systemctl restart network **重启网络服务
+**service network restart** 或**systemctl restart network**重启网络服务
 
 **/etc/sysconfg/network-script** 配置文件举例：（该文件配置生效为永久保存）
 
@@ -1172,7 +1172,7 @@ ONBOOT=yes
 
 
 
- **tracepath、traceroute、mtr ** 命令可用来跟踪路由
+**tracepath、traceroute、mtr** 命令可用来跟踪路由
 
 将**/proc/sys/net/ipv4/ip_forward** 置为1可开启路由转发功能，此时机器可充当路由器
 
@@ -1189,23 +1189,23 @@ cat /etc/profile |tr -sc 'a-zA-Z' '\n' |wc -l #计算/etc/profile文件中单词
 
 #### 文本处理：
 
- **iconv -f gb2312 test.txt -o output.txt ** 转换文件编码格式为Unicode编码
+**iconv -f gb2312 test.txt -o output.txt** 转换文件编码格式为Unicode编码
 
- **tr ** 转换命令
+**tr** 转换命令
 
- **tr 'a-z' 'A-Z' ** 将小写转换为大写
+**tr 'a-z' 'A-Z'** 将小写转换为大写
 
- **tr 'a-c' '1-3' ** 将对应字母与数字转换
+**tr 'a-c' '1-3'** 将对应字母与数字转换
 
- **who > who.log;tr -s " " < who.log ** 将命令 **who ** 结果输出文件中的空格压缩并再次输出到屏幕中
+**who > who.log;tr -s " " < who.log** 将命令**who** 结果输出文件中的空格压缩并再次输出到屏幕中
 
- **who > who.log;tr -s " " + < who.log ** 将命令 **who ** 结果输出文件中的空格压缩并将空格替换为**+**号
+**who > who.log;tr -s " " + < who.log** 将命令**who** 结果输出文件中的空格压缩并将空格替换为**+**号
 
- **echo {1..100} > bc.txt;tr " " + < bc.txt > tr.out;bc < tr.out > bc.out ** 计算1-100的累加和
+**echo {1..100} > bc.txt;tr " " + < bc.txt > tr.out;bc < tr.out > bc.out** 计算1-100的累加和
 
- **tr " " '\n' < f1.txt ** 将**f1.txt**文件中的空格替换为换行
+**tr " " '\n' < f1.txt** 将**f1.txt**文件中的空格替换为换行
 
- **echo {1..100} |tr ' ' +|bc ** 计算1-100的累加和
+**echo {1..100} |tr ' ' +|bc** 计算1-100的累加和
 
 ```bash
 echo `date +%s`/3600/24 |bc		#计算当前日期天数时间戳
@@ -1236,9 +1236,9 @@ nmap -v -sP 192.168.0.1/24 |grep -B1 up |grep report |cut -d" " -f5 > iplist.txt
 grep f1 f2 #取f1与f2文件内容的交集
 ```
 
- **egrep ** 及扩展的正则表达式：
+**egrep** 及扩展的正则表达式：
 
- **egrep **= **grep -E **
+**egrep**=**grep -E**
 
 字符匹配：
 
@@ -1289,17 +1289,17 @@ C|cat C或cat
 (C|c)at Cat或cat
 ```
 
-取目录基名： **echo "/etc/rc.d/init.d/functions" |egrep -o "[^/]+$" **
+取目录基名：**echo "/etc/rc.d/init.d/functions" |egrep -o "[^/]+$"**
 
-取目录名： **echo "/etc/rc.d/init.d/" |egrep -o ".*/[^/]" |egrep -o ".*/" ** 
+取目录名：**echo "/etc/rc.d/init.d/" |egrep -o ".*/[^/]" |egrep -o ".*/"** 
 
-取IP地址信息： **ifconfig eth0 |egrep -o "([[:digit:]]{3}.){3}([[:digit:]])" ** 或者 **ifconfig eth0 |grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}" **（基本正则表达式）
+取IP地址信息：**ifconfig eth0 |egrep -o "([[:digit:]]{3}.){3}([[:digit:]])"** 或者**ifconfig eth0 |grep -o "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}"**（基本正则表达式）
 
 sed：stream editor，文本编辑工具
 
 awk：Linux上的实现gawk，文本报告生成器
 
- **cut ** 命令按列取，例如： **cut -d: -f1,3,5-7 /etc/passwd **  根据“:”分列取**/etc/passwd**中的第一列和第五列到第七列
+**cut** 命令按列取，例如：**cut -d: -f1,3,5-7 /etc/passwd**  根据“:”分列取**/etc/passwd**中的第一列和第五列到第七列
 
 ```bash
 df |cut -c44-46 #按照字符数取出磁盘利用率
@@ -1308,15 +1308,15 @@ ifconfig eth0 |head -2 |tail -1 |tr -s " " : |cut -d: -f3 #取出网卡地址
 ifconfig eth0 |head -2 |tail -1 |tr -dc '[0-9].' |tr -s " " |cut -d" " -f2
 ```
 
- **wc ** 文本数据统计工具
+**wc** 文本数据统计工具
 
- **cut -d " " -f1 /var/log/httpd/access_log|wc -l **  统计web网站的访问次数
+**cut -d " " -f1 /var/log/httpd/access_log|wc -l**  统计web网站的访问次数
 
- **seq ** 生成字符串范围
+**seq** 生成字符串范围
 
- **seq 63 ** 生成1-63数字
+**seq 63** 生成1-63数字
 
- **sort ** 文本内容排序工具，把整理过的文本显示在STDOUT，不改变原始文件
+**sort** 文本内容排序工具，把整理过的文本显示在STDOUT，不改变原始文件
 
 ```bash
 sort [options] file
@@ -1334,7 +1334,7 @@ df |tr -s " " %| cut -d% -f5 |sort -nr |head -1 #查看磁盘最高利用率
 cut -d " " -f1 /var/log/httpd/access_log |sort -u |wc -l #查看web服务器访问地址数
 ```
 
- **uniq ** 命令：从输入中删除前后相接的重复的行
+**uniq** 命令：从输入中删除前后相接的重复的行
 
 ```bash
 -c #显示每行重复出现的次数
@@ -1349,7 +1349,7 @@ cat f1 f2 |sort |uniq -u #取两文件不同的内容
 cat f1 f2 |sort -u #取两文件并集
 ```
 
- **cut **和 **paste **
+**cut**和**paste**
 
 ```bash
 #显示文件或STDIN数据的指定列
@@ -1368,23 +1368,23 @@ paste -s f1 f2
 
 ### 用户与组：
 
- **vipw **= **vi /etc/passwd **
+**vipw**=**vi /etc/passwd**
 
- **vigr **= **vi /etc/group **
+**vigr**=**vi /etc/group**
 
- **pwck ** 检查**/etc/passwd**文件格式是否正确
+**pwck** 检查**/etc/passwd**文件格式是否正确
 
- **grpck ** 检查**/etc/gropu** 文件格式是否正确
+**grpck** 检查**/etc/gropu** 文件格式是否正确
 
 **/etc/login.defs**中为用户策略配置文件
 
- **su user ** 切换用户登录， **exit ** 退出当前用户登录
+**su user** 切换用户登录，**exit** 退出当前用户登录
 
- **su -u user ** 切换用户登录时同时切换到用户user的家目录
+**su -u user** 切换用户登录时同时切换到用户user的家目录
 
- **su ** 默认切换为root账户， **su ** 切换root账户登登录时同时切换到root的家目录
+**su** 默认切换为root账户，**su** 切换root账户登登录时同时切换到root的家目录
 
- **su - -c 'cat /etc/shadow' **  使用root账户身份执行当前命令（无需执行用户身份切换）
+**su - -c 'cat /etc/shadow'**  使用root账户身份执行当前命令（无需执行用户身份切换）
 
 用户管理命令：
 
@@ -1425,7 +1425,7 @@ newusers file #可编辑类似于/etc/passwd格式文件保存至file中实现�
 
 **/etc/skel** 下放置用户默认家目录文件布局
 
-若用户的家目录不慎被删除导致无法执行切换目录操作，可执行 **cp /etc/skel /home/user;chown -R user.user /home/user;chmod 700 /home/user ** 应急修复家目录
+若用户的家目录不慎被删除导致无法执行切换目录操作，可执行**cp /etc/skel /home/user;chown -R user.user /home/user;chmod 700 /home/user** 应急修复家目录
 
 组账户管理命令：
 
@@ -1655,7 +1655,7 @@ vim file1 file2 file3...
 
 ### 磁盘管理：
 
- **lsblk ** 查看分区
+**lsblk** 查看分区
 
 分区类型：
 
@@ -1673,11 +1673,11 @@ vim file1 file2 file3...
 
 最多有128个主分区
 
- **dd if=/dev/sda of=dpt bs=1 count=64 skip=446 ** 本分MBR分区表信息
+**dd if=/dev/sda of=dpt bs=1 count=64 skip=446** 本分MBR分区表信息
 
 管理分区：
 
- **lsblk ** 列出块设备
+**lsblk** 列出块设备
 
 ```bash
 #创建分区使用：
@@ -1712,15 +1712,15 @@ mkfs. -t {ext2|ext3|ext4} #指定文件系统类型
 -O ^FEATURE #关闭指定特性
 ```
 
- **blkid ** 查看文件系统类型
+**blkid** 查看文件系统类型
 
- **tune2fs -l ** 查看ext文件系统元数据
+**tune2fs -l** 查看ext文件系统元数据
 
 在CentOS6之前的版本中手动创建的分区，默认不具备ACL功能
 
- **fsck ** 文件系统检查命令
+**fsck** 文件系统检查命令
 
- **mount ** 挂载分区命令
+**mount** 挂载分区命令
 
 ```bash
 mount/unmount /dev/sda /mnt #挂载/卸载设备
@@ -1743,13 +1743,13 @@ mount/unmount -U uuid /mnt
 defaults：相当于rw,suid,dev,exec,auto,nouser,async
 ```
 
- **findmnt /mnt ** 判断当前目录是否存在挂载点
+**findmnt /mnt** 判断当前目录是否存在挂载点
 
 一个设备可以同时挂载到多个位置，但一个目录不可以挂载多个设备
 
- **lsof /mnt/sda1 ** 查看当前正在使用挂载分区的用户（ **fuser -v /mnt/sda1 **）
+**lsof /mnt/sda1** 查看当前正在使用挂载分区的用户（**fuser -v /mnt/sda1**）
 
- **fuser -km /mnt/sda1 ** 踢出所有正在使用此挂载分区的用户（谨慎使用）
+**fuser -km /mnt/sda1** 踢出所有正在使用此挂载分区的用户（谨慎使用）
 
 **swap** 交换分区：
 
@@ -1765,21 +1765,21 @@ swapon/off -a #启用/禁用swap分区
 将**/home**目录迁移到新分区：
 
 1.  创建并格式化新分区，挂载分区
-2.  拷贝**home**目录： **cp -a /home/. /mnt/home **
+2.  拷贝**home**目录：**cp -a /home/. /mnt/home**
 3.  修改**/etc/fstab** 文件永久配置
 
 挂载USB设备：
 
-1.  查看USB设备是否被识别： **lsusb **
-2.  手动挂载： **mount /dev/sdb1 /mnt **
+1.  查看USB设备是否被识别：**lsusb**
+2.  手动挂载：**mount /dev/sdb1 /mnt**
 
 **/misc** 杂项文件夹，可用来加载光盘等
 
- **systemctl enable autofs **  实现**/misc/cd**等设备的自动挂载
+**systemctl enable autofs**  实现**/misc/cd**等设备的自动挂载
 
- **systemctl start autofs **
+**systemctl start autofs**
 
-执行过上述命令后，可通过 **cd /misc/cd **命令进入到光盘中
+执行过上述命令后，可通过**cd /misc/cd**命令进入到光盘中
 
 常用工具：
 
@@ -1797,7 +1797,7 @@ du [option] DIR
 -s summary --max-depth
 ```
 
- **dd **工具：转换及复制
+**dd**工具：转换及复制
 
 ```bash
 用法：dd if=/path/from/src of /path/to/dest
@@ -1823,15 +1823,15 @@ dd if=/dev/zero of=/swapfile bs=2G count=1 #生成一个大文件
 
 软RAID：
 
- **mdadm **  为软RAID提供管理界面
+**mdadm**  为软RAID提供管理界面
 
 为空余磁盘添加冗余
 
-结合内核中的 **md ** (multi devices)
+结合内核中的**md** (multi devices)
 
 RAID设备可命名为**/dev/md0、/dev/md1** 等
 
- **mdadm **
+**mdadm**
 
 ```bash
 命令的语法格式：mdadm [mode] <raiddevice> [options] <component-devices>
@@ -1888,21 +1888,21 @@ lvconvert --merge /dev/vg0/lv_data_snap #快照合并
 
 ### 软件包管理：
 
- **yum ** rpm包管理的前端工具
+**yum** rpm包管理的前端工具
 
- **apt-get ** deb包管理的前端工具
+**apt-get** deb包管理的前端工具
 
- **zypper ** suse上的rpm前端管理工具
+**zypper** suse上的rpm前端管理工具
 
- **dnf ** Fedora 18+ rpm包管理前端工具
+**dnf** Fedora 18+ rpm包管理前端工具
 
 库文件：
 
-查看二进制程序的库文件： **ldd /PATH/TO/BINARY_FILE **
+查看二进制程序的库文件：**ldd /PATH/TO/BINARY_FILE**
 
-管理及查看本机装载的库文件： **ldconfig ** 加载配置文件中的执行的库文件
+管理及查看本机装载的库文件：**ldconfig** 加载配置文件中的执行的库文件
 
- **/sbin/ldconfig -p ** 显示本机已经缓存的所有可用库中文件名及文件路径的映射关系
+**/sbin/ldconfig -p** 显示本机已经缓存的所有可用库中文件名及文件路径的映射关系
 
 配置文件：**/etc/ld.so.conf，/etc/ld.so.conf.d/*.conf**
 
@@ -1983,17 +1983,17 @@ yum ：rpm包管理前端工具
 	gpgkey=url://
 ```
 
- **yum repolist ** 加载repo仓库
+**yum repolist** 加载repo仓库
 
- **yum install/remove ** 安装/卸载
+**yum install/remove** 安装/卸载
 
- **yum info PACKAGE_FILE ** 查看仓库中包的信息
+**yum info PACKAGE_FILE** 查看仓库中包的信息
 
- **yum list ** 列出所有仓库里的包
+**yum list** 列出所有仓库里的包
 
- **yum history ** 查看yum的历史操作
+**yum history** 查看yum的历史操作
 
-​	 **yum history undo/redo ** 撤销/重做历史操作（可用来卸载软件）
+​	**yum history undo/redo** 撤销/重做历史操作（可用来卸载软件）
 
 创建远程yum共享服务器：
 
@@ -2005,20 +2005,20 @@ yum ：rpm包管理前端工具
 
 C语言源码编译安装三步骤：
 
-1.  **./configure**
+1. **./configure**
 
     通过选项传递参数，指定启用特性、安装路径等；执行时会参考用户的指定以及**Makefile.in**文件生成**Makefile**
 
     检查依赖到的外部环境，如以来的软件包
 
-    2.  **make** 根据**Makefile** 文件，构建应用程序
-    3.  **make install** 复制文件到相应路径
+    2. **make** 根据**Makefile** 文件，构建应用程序
+    3. **make install** 复制文件到相应路径
 
 开发工具：
 
- **autoconf ** 生成**configure**脚本
+**autoconf** 生成**configure**脚本
 
- **automake ** 生成**Makefile.in**
+**automake** 生成**Makefile.in**
 
 ### Shell 脚本编程：
 
@@ -2051,9 +2051,9 @@ shell脚本的用途有：
 
 bash检查脚本错误：
 
- **bash -n shell.sh ** 检查脚本语法错误
+**bash -n shell.sh** 检查脚本语法错误
 
- **bash -x shell.sh **  调试执行脚本
+**bash -x shell.sh**  调试执行脚本
 
 变量：命名的内存空间
 
@@ -2071,25 +2071,25 @@ bash检查脚本错误：
    				2. 参与的运算
                         				3. 表示的数据范围
 
-当局部变量定义成功后，使用 **export  ** 可将局部变量转换为全局变量，如 **name=test;export name ** 或 **export name=test ** 或 **declare -x name=test **，此时**name**则转换为全局变量
+当局部变量定义成功后，使用**export ** 可将局部变量转换为全局变量，如**name=test;export name** 或**export name=test** 或**declare -x name=test**，此时**name**则转换为全局变量
 
 全局变量父进程可以传给各级附属子进程，但是子进程无法回传全局变量
 
-执行 **export ** 或 **declare -x ** 或 **env ** 命令可查看当前系统的环境变量（全局变量）
+执行**export** 或**declare -x** 或**env** 命令可查看当前系统的环境变量（全局变量）
 
- **set ** 命令可显示出当前系统中的所有变量包括局部变量和环境变量
+**set** 命令可显示出当前系统中的所有变量包括局部变量和环境变量
 
- **unset name ** 删除变量
+**unset name** 删除变量
 
-脚本中执行结束后应当使用 **unset **删除变量释放内存
+脚本中执行结束后应当使用**unset**删除变量释放内存
 
 只读变量（常量）：
 
- **readonly name=test ** 设置只读变量
+**readonly name=test** 设置只读变量
 
 常量的生命有效期为整个程序运行的有效期
 
- **delcare -r ** 显示当前系统存在的常量（ **readonly -p **）
+**delcare -r** 显示当前系统存在的常量（**readonly -p**）
 
 shell中在括号中执行命令可将命令集中处理
 
@@ -2118,11 +2118,11 @@ set -- #清空所有位置变量
 ·$?变量保存最近的命令退出状态
 ```
 
-例如： **ping -c1 -W1 hostdown &> /dev/null **， **echo $? **
+例如：**ping -c1 -W1 hostdown &> /dev/null**，**echo $?**
 
 退出状态码：
 
- **exit 0 ** 返回结果为0（ **exit 100 ** 返回结果为100）
+**exit 0** 返回结果为0（**exit 100** 返回结果为100）
 
 算术运算：
 
@@ -2180,27 +2180,27 @@ test EXPRESSION
 
 如果想要临时允许的话只需要把下面的1换成0即可
 
- **echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all **
+**echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all**
 
 永久禁止ping命令：
 
 在**/etc/sysctl.conf**文件中新增加一行
 
- **net.ipv4.icmp_echo_ignore_all=1 ** 修改完成后执行 **sysctl -p ** 使新的配置生效
+**net.ipv4.icmp_echo_ignore_all=1** 修改完成后执行**sysctl -p** 使新的配置生效
 
 防火墙禁制ping设置：
 
- **iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT **
+**iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT**
 
- **iptables -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT **
+**iptables -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT**
 
 或者
 
- **iptables -A INPUT -p --icmp-type 8 -s 0/0 -j DROP **
+**iptables -A INPUT -p --icmp-type 8 -s 0/0 -j DROP**
 
 
 
- **last **命令获取用户登录信息： **last |head -5 |tr -s " " **
+**last**命令获取用户登录信息：**last |head -5 |tr -s " "**
 
 ```bash
 for user in `ls /home'; do echo -ne "$user\t"; last $user |wc -l; done #统计每个用户登录次数
@@ -2224,7 +2224,7 @@ done
 
 ```
 
- **ac ** 命令统计每个用户登录时长： **ac user **
+**ac** 命令统计每个用户登录时长：**ac user**
 
 脚本：
 
@@ -2243,11 +2243,11 @@ done
 
 bash脚本：
 
- **set -x -e -u -o pipefail **
+**set -x -e -u -o pipefail**
 
 在写脚本时，在一开始（Shebang之后）加上下面这一句，或者它的缩略版，能避免很多问题，更重要的是能让很多隐藏的问题暴露出来：
 
- **set -xeuo pipefail **
+**set -xeuo pipefail**
 
 **-x**：在执行每一个命令之前把经过变量展开之后的命令打印出来
 
@@ -2431,9 +2431,9 @@ mysql_install_db --datadir=/mysqldb/3306(78)/data --user=mysql --basedir=/usr
 
 LVS负载均衡：
 
- **ipvsadm **
+**ipvsadm**
 
- **ipvsadm **包构成：
+**ipvsadm**包构成：
 
 程序包：**ipvsadm**
 
@@ -2449,7 +2449,7 @@ Unit File：**ipvsadm.service**
 
 
 
- **ipvsadm ** 命令：
+**ipvsadm** 命令：
 
 核心功能：
 
@@ -2538,7 +2538,7 @@ Linux分区：系统分区和数据分区分离原则，LVM是否需要，多分
 
  1.    服务器IP地址配置：**/etc/sysconfig/network-scripts/ifcfg-eth/1/2...**
 
-       重启网卡命令： **service network restart ** 或者 **/etc/init.d/network restart **
+       重启网卡命令：**service network restart** 或者**/etc/init.d/network restart**
 
 	2. 网关/主机名配置：**/etc/sysconfig/network**
 
@@ -2550,11 +2550,11 @@ Linux分区：系统分区和数据分区分离原则，LVM是否需要，多分
 
  1.    SeLinux配置（如何关闭selinux）
 
-       查看selinux状态： **cat /etc/selinux/config **
+       查看selinux状态：**cat /etc/selinux/config**
 
        selinux的状态：enforcing开启状态，disabled禁用状态，permissive提醒的状态
 
-       命令行关闭： **setenforce 0 **
+       命令行关闭：**setenforce 0**
 
 	2. iptables配置：**/etc/sysconfig/iptables**
 
@@ -2562,15 +2562,15 @@ Linux分区：系统分区和数据分区分离原则，LVM是否需要，多分
 
     ​	**/etc/sudoers**文件
 
-    ​	 **<user list> <host list> = <operator list> <tag list> <command list> **
+    ​	**<user list> <host list> = <operator list> <tag list> <command list>**
 
     ​	常见配置：**linux ALL=(ALL) NOPASSWD:ALL**
 
 	4. ssh安全登录经验：
 
-    备份： **cp /etc/ssh/sshd_config sshd_config_bak **（运维必备守则）
+    备份：**cp /etc/ssh/sshd_config sshd_config_bak**（运维必备守则）
 
-     **vim /etc/ssh/sshd_config **
+    **vim /etc/ssh/sshd_config**
 
     ​	*#* 不适用DNS反查，可提高ssh连接速度
 
@@ -2594,13 +2594,13 @@ Linux分区：系统分区和数据分区分离原则，LVM是否需要，多分
 
 	2. 升级系统内核异界更新软件
 
-    清空yum缓存： **yum clean all **
+    清空yum缓存：**yum clean all**
 
-    生成缓存： **yum makecache **
+    生成缓存：**yum makecache**
 
-    开始更新系统以及内核： **yum upgrade **
+    开始更新系统以及内核：**yum upgrade**
 
-    必备软件： **yum install ntpdate wget -y **
+    必备软件：**yum install ntpdate wget -y**
 
 
 
@@ -2610,7 +2610,7 @@ Linux分区：系统分区和数据分区分离原则，LVM是否需要，多分
 
        推荐的时间服务器：ntp.sjtu.edu.cn
 
-       `*/10 * * * * * /usr/sbin/ntpdate ntp.sjtu.edu.cn >> /var/log/ntp.log 2>&1; /sbin/hwclock -w`
+       `*/10***** /usr/sbin/ntpdate ntp.sjtu.edu.cn >> /var/log/ntp.log 2>&1; /sbin/hwclock -w`
 
 	2. 架设ntp server
 
@@ -2644,20 +2644,20 @@ Linux分区：系统分区和数据分区分离原则，LVM是否需要，多分
 
     ip_conntrack_max 参数
 
-    **/proc/sys/net/ipv4/netfiliter/ip_contrack_max**或者**/proc/sys/net/ipv4/ip_conntrack_max （centos5版本）**、**/etc/sys/net/netfiliter/nf_conntrack_max （centos6版本）**
+   **/proc/sys/net/ipv4/netfiliter/ip_contrack_max**或者**/proc/sys/net/ipv4/ip_conntrack_max （centos5版本）**、**/etc/sys/net/netfiliter/nf_conntrack_max （centos6版本）**
 
     在**/etc/syscl.conf**加入
 
     `net.ipv4.netfilter.ip_conntrack_max = 655360（centos5）
     net.nf_conntrack_max = 1000000 （centos6）`
 
-     **sysctl -p **
+    **sysctl -p**
 
     swappiness 参数
 
     表示使用swap的概率，此值越大，表示使用swap的概率越大，推荐配置如下：
 
-    查看目前配置： **cat /proc/sys/vm/swappiness **
+    查看目前配置：**cat /proc/sys/vm/swappiness**
 
     添加如下内容到**/etc/sysctl.conf**
 
@@ -2773,12 +2773,12 @@ Linux故障排除思路
 Linux性能优化工具
 
 1.  CPU性能评估工具：
-    1.  vmstat（系统默认自带）：利用vmstat命令可以对操作系统的内存信息，进程状态、CPU活动等进行监控。常用方式： **vmstat 2 3  ** （表示每3秒更新一次输出信息，统计5次后停止输出）
-    2.  iostat（需要安装sysstat工具包）：iostat时I/O statistics（输入/输出统计）的缩写，主要功能时对系统的磁盘I/O操作进行监视。常用方式： **iostat -c 3 5 **（其中，-c 表示显示CPU的使用情况，-d显示磁盘的使用情况）
+    1.  vmstat（系统默认自带）：利用vmstat命令可以对操作系统的内存信息，进程状态、CPU活动等进行监控。常用方式：**vmstat 2 3 ** （表示每3秒更新一次输出信息，统计5次后停止输出）
+    2.  iostat（需要安装sysstat工具包）：iostat时I/O statistics（输入/输出统计）的缩写，主要功能时对系统的磁盘I/O操作进行监视。常用方式：**iostat -c 3 5**（其中，-c 表示显示CPU的使用情况，-d显示磁盘的使用情况）
     3.  uptime命令：主要用来统计系统当前的运行状况，输出的信息依次为：系统现在的时间，系统从上次开机到现在运行了多少时间，系统目前有多少登录用户，系统在一分钟内、五分钟内、十五分钟内的平均负载
 2.  内存性能评估：
-    1.  free命令：free命令是监控Linux内存使用情况最常用的命令。常见用法： **free -m **
-    2.  sar/pidstat：这两个命令主要用户监控全部或指定进程占用系统资源的情况，如CPU、内存、设备IO。三个共同参数：-u（获取CPU状态）-r（获取内存状态）-d（获取磁盘）。常用组合： **sar -r 3  ** 获取CPU3秒内的状态， **pidstat -r -p 1 3 **获取内存3秒内的状态
+    1.  free命令：free命令是监控Linux内存使用情况最常用的命令。常见用法：**free -m**
+    2.  sar/pidstat：这两个命令主要用户监控全部或指定进程占用系统资源的情况，如CPU、内存、设备IO。三个共同参数：-u（获取CPU状态）-r（获取内存状态）-d（获取磁盘）。常用组合：**sar -r 3 ** 获取CPU3秒内的状态，**pidstat -r -p 1 3**获取内存3秒内的状态
 3.  磁盘性能评估：
     1.  iostat -d组合，iostat -d 2 3
     2.  pidstat -d -p 31887 3
@@ -2884,11 +2884,11 @@ ansible-galaxy：
 
 连接https://galaxy.ansible.com下载相应的roles
 
-列出所有已安装的galaxy： **ansible-galaxy list **
+列出所有已安装的galaxy：**ansible-galaxy list**
 
-安装galaxy： **ansible-galaxy install geerlingguy.redis **
+安装galaxy：**ansible-galaxy install geerlingguy.redis**
 
-删除galaxy： **ansible-galaxy remove geerlinggue.redis **
+删除galaxy：**ansible-galaxy remove geerlinggue.redis**
 
 
 
@@ -2898,9 +2898,9 @@ ansible-pull：推从命令至远程，可提升效率但对运维要求较高
 
 ansible-playbook：
 
-使用语法： **ansible-playybook hello.yml **
+使用语法：**ansible-playybook hello.yml**
 
- **cat hello.yml **
+**cat hello.yml**
 
 ```yaml
 #hello world yml file
@@ -2914,9 +2914,9 @@ ansible-playbook：
 
 
 
- **ansible-vault encrypt hello.yml **：加密playbook
- **ansible-vault view hello.yml **
- **ansible-vault rekey hello.yml **
- **ansible-vault edit hello.yml **
+**ansible-vault encrypt hello.yml**：加密playbook
+**ansible-vault view hello.yml**
+**ansible-vault rekey hello.yml**
+**ansible-vault edit hello.yml**
 
- **ansible-console **：可执行交互式命令
+**ansible-console**：可执行交互式命令
