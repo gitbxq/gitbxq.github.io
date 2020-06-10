@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "闲暇从阿里云大学记的笔记"
-tags: basic
+tags: 基础知识笔记
 ---
 
 # Linux 常用基础操作命令
