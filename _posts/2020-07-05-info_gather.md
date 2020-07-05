@@ -217,3 +217,19 @@ exp及漏洞搜索引擎
 [FoFa](https://fofa.so/)
 
 网络空间资产搜索引擎
+
+### 38. PublicWWW
+
+[PublicWWW](https://publicwww.com/)
+
+源码搜索引擎
+
+### 40. 浏览器插件类
+
+[Wappalyzer](https://www.wappalyzer.com/)
+
+[Mitaka](https://github.com/ninoseki/mitaka)
+
+[retire.js](https://github.com/RetireJS/retire.js)
+
+[fofa_view](https://github.com/fofapro/fofa_view)
