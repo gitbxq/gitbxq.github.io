@@ -7,5 +7,8 @@ basic:
 share:
   name: share
 
+ctf:
+  name: ctf
+
 # tag4:
 #  name: tag4
